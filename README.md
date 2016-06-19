@@ -1,4 +1,4 @@
-# Project_Marconi
+# Project Marconi
 ###### Modem Design
 
 Telecommunications is an inevitable part of today’s world. 
