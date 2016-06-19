@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/xst"
+elaborate
+-ifn topModule.prj
+-ifmt mixed

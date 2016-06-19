@@ -1,0 +1,25 @@
+NET "clock" LOC = "B8";
+NET "sdata" LOC = "b9";
+#NET "cs" LOC = "a9";
+NET "clk200Khz" LOC = "a10";
+NET "ADCorDDS" LOC = "a7";
+NET "wea" LOC = "m4";
+NET "oscilloscope" LOC = "c9";
+
+NET "leds<0>" LOC = "B2";
+NET "leds<1>" LOC = "A3";
+NET "leds<2>" LOC = "J3";
+NET "leds<3>" LOC = "B5";
+NET "leds<4>" LOC = "C6";
+NET "leds<5>" LOC = "B6";
+NET "leds<6>" LOC = "A9";
+NET "leds<7>" LOC = "B7";
+
+NET "switch<0>" LOC = "p11";
+NET "switch<1>" LOC = "l3";
+NET "switch<2>" LOC = "k3";
+NET "switch<3>" LOC = "b4";
+NET "switch<4>" LOC = "g3";
+NET "switch<5>" LOC = "f3";
+NET "switch<6>" LOC = "e2";
+NET "switch<7>" LOC = "n3";

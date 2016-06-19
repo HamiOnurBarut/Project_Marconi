@@ -1,0 +1,3 @@
+vhdl work "rs232.vhd"
+vhdl work "ramBlock.vhd"
+vhdl work "topModule.vhd"

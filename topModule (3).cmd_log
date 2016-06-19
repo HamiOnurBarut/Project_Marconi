@@ -1,0 +1,158 @@
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc cons.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+map -intstyle ise -p xc3s100e-cp132-5 -cm area -ir off -pr off -c 100 -o topModule_map.ncd topModule.ngd topModule.pcf 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 
+netgen -intstyle ise -ar Structure -tm topModule -w -dir netgen/synthesis -ofmt vhdl -sim topModule.ngc topModule_synthesis.vhd 
+par -w -intstyle ise -ol high -t 1 topModule_map.ncd topModule.ncd topModule.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml topModule.twx topModule.ncd -o topModule.twr topModule.pcf -ucf cons.ucf 
+bitgen -intstyle ise -f topModule.ut topModule.ncd 

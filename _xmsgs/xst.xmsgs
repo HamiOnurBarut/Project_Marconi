@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/topModule</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/topModule.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/topModule.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/topModule/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/topModule.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/topModule.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ramBlock</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/ramBlock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/ramBlock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/ramBlock/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/ramBlock.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/ramBlock.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/rs232</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/rs232.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/rs232.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/rs232/Behavioral</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab2/rs232.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/rs232.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/ass/Downloads/EEE 495/EEE 495/lab2/ramBlock.vhd</arg>&quot; line <arg fmt="%d" index="2">25</arg>: Index value(s) does not match array range, simulation mismatch.
+</msg>
+
+<msg type="info" file="Xst" num="3044" delta="old" >The ROM &lt;<arg fmt="%s" index="1">Mrom_output_rom0000</arg>&gt; will be implemented as a read-only BLOCK RAM, absorbing the register: &lt;<arg fmt="%s" index="2">output</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3225" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mrom_output_rom0000</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+</msg>
+
+</messages>
+

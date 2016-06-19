@@ -1,0 +1,8 @@
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.xst" -ofn "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/moDEM/topModule.syr" 
+xst -intstyle ise -ifn "C:/Users/ass/Downloads/EEE 495/EEE 495/moDEM/topModule.xst" -ofn "C:/Users/ass/Downloads/EEE 495/EEE 495/moDEM/topModule.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topModule.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc topModule.ucf -p xc3s100e-cp132-5 "topModule.ngc" topModule.ngd  

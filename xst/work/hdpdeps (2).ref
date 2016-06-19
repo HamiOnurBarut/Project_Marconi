@@ -1,0 +1,31 @@
+V3 15
+FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" 2015/02/23.22:46:03 P.20131013
+EN work/ADC 1424786954 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ADC/Behavioral 1424786955 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" \
+      EN work/ADC 1424786954 CP clkdivider
+FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" 2015/02/23.22:30:08 P.20131013
+EN work/clkdivider 1424786952 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
+AR work/clkdivider/Behavioral 1424786953 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" \
+      EN work/clkdivider 1424786952
+FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" 2015/02/24.00:32:09 P.20131013
+EN work/DDS 1424786956 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" \
+      PB ieee/std_logic_1164 1381692176
+AR work/DDS/DDS_a 1424786957 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" \
+      EN work/DDS 1424786956
+FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" 2015/02/24.16:09:06 P.20131013
+EN work/topModule 1424786958 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/topModule/Behavioral 1424786959 \
+      FL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" \
+      EN work/topModule 1424786958 CP ADC CP DDS

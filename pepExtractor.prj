@@ -1,0 +1,4 @@
+work	"ADC.vhd"
+work	"clkdivider.vhd"
+work	"rs232.vhd"
+work	"topModule.vhd"

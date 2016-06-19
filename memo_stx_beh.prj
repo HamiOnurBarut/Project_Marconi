@@ -1,0 +1,5 @@
+vhdl isim_temp "clkdivider.vhd"
+vhdl isim_temp "rs232.vhd"
+vhdl isim_temp "ADC.vhd"
+vhdl isim_temp "topModule.vhd"
+vhdl isim_temp "memo.vhd"

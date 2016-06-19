@@ -1,0 +1,20 @@
+NET "clock" LOC = "B8";
+
+# Asynchronous communication signal
+NET "txd1" LOC = "a9";
+
+# Swithces
+NET "swithces<7>" LOC = "n3";
+NET "swithces<6>" LOC = "e2";
+NET "swithces<5>" LOC = "f3";
+NET "swithces<4>" LOC = "g3";
+NET "swithces<3>" LOC = "b4";
+NET "swithces<2>" LOC = "k3";
+NET "swithces<1>" LOC = "l3";
+NET "swithces<0>" LOC = "p11";
+
+# Buttons to control which data should be sent
+NET "send8KB" LOC = "c11";
+NET "sendSwitch" LOC = "g12";
+NET "tx_start1" LOC = "a7";
+NET "test_mode1" LOC = "m4";

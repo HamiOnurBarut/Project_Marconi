@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/xst"
+elaborate
+-ifn ADC.prj
+-ifmt mixed

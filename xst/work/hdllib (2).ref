@@ -1,0 +1,8 @@
+AR clkdivider behavioral "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" sub00/vhpl05 1424786953
+EN dds NULL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" sub00/vhpl06 1424786956
+AR dds dds_a "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" sub00/vhpl07 1424786957
+EN clkdivider NULL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" sub00/vhpl04 1424786952
+AR topmodule behavioral "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" sub00/vhpl03 1424786959
+EN adc NULL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" sub00/vhpl00 1424786954
+AR adc behavioral "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" sub00/vhpl01 1424786955
+EN topmodule NULL "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" sub00/vhpl02 1424786958

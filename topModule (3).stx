@@ -1,0 +1,48 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+WARNING:HDLParsers:3607 - Unit work/topModule is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/topModule.vhd".
+WARNING:HDLParsers:3607 - Unit work/topModule/Behavioral is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/topModule.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/topModule.vhd".
+WARNING:HDLParsers:3607 - Unit work/ADC is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/ADC.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/ADC.vhd".
+WARNING:HDLParsers:3607 - Unit work/ADC/Behavioral is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/ADC.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/ADC.vhd".
+WARNING:HDLParsers:3607 - Unit work/rs232 is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/rs232.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/rs232.vhd".
+WARNING:HDLParsers:3607 - Unit work/rs232/Behavioral is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/rs232.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/rs232.vhd".
+WARNING:HDLParsers:3607 - Unit work/clkdivider is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/clkdivider.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/clkdivider.vhd".
+WARNING:HDLParsers:3607 - Unit work/clkdivider/Behavioral is now defined in a different file.  It was defined in "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab4/clkdivider.vhd", and is now defined in "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/clkdivider.vhd".
+Compiling vhdl file "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/clkdivider.vhd" in Library work.
+Architecture behavioral of Entity clkdivider is up to date.
+Compiling vhdl file "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/rs232.vhd" in Library work.
+Architecture behavioral of Entity rs232 is up to date.
+Compiling vhdl file "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/ADC.vhd" in Library work.
+Architecture behavioral of Entity adc is up to date.
+Compiling vhdl file "C:/Users/ass/Downloads/EEE 495/EEE 495/lab4/topModule.vhd" in Library work.
+Architecture behavioral of Entity topmodule is up to date.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.30 secs
+ 
+--> 
+
+Total memory usage is 258952 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

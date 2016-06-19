@@ -1,0 +1,22 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Feb 17 23:50:58 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "tx_start1" LOCATE = SITE "A7" LEVEL 1;
+COMP "txd1" LOCATE = SITE "A9" LEVEL 1;
+COMP "send8KB" LOCATE = SITE "C11" LEVEL 1;
+COMP "swithces<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "clock" LOCATE = SITE "B8" LEVEL 1;
+COMP "swithces<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "swithces<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "swithces<3>" LOCATE = SITE "B4" LEVEL 1;
+COMP "swithces<4>" LOCATE = SITE "G3" LEVEL 1;
+COMP "swithces<5>" LOCATE = SITE "F3" LEVEL 1;
+COMP "swithces<6>" LOCATE = SITE "E2" LEVEL 1;
+COMP "swithces<7>" LOCATE = SITE "N3" LEVEL 1;
+COMP "sendSwitch" LOCATE = SITE "G12" LEVEL 1;
+COMP "test_mode1" LOCATE = SITE "M4" LEVEL 1;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

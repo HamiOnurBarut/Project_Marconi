@@ -1,0 +1,858 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: topModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "topModule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "topModule"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : topModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/clkdivider.vhd" in Library work.
+Architecture behavioral of Entity clkdivider is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/rs232.vhd" in Library work.
+Architecture behavioral of Entity rs232 is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/ADC.vhd" in Library work.
+Architecture behavioral of Entity adc is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/topModule.vhd" in Library work.
+Entity <topmodule> compiled.
+Entity <topmodule> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <topModule> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <rs232> in library <work> (architecture <behavioral>) with generics.
+	MCLK_CYCLE = 3124
+	SCLK_CYCLE = 1
+	WAIT_CYCLE = 6
+	inc = 151
+	nofData = 128
+	nofTest = 21
+	pow = 16
+
+Analyzing hierarchy for entity <ADC> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkdivider> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <topModule> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <tx_start> in unit <topModule> has a constant value of 1 during circuit operation. The register is replaced by logic.
+Entity <topModule> analyzed. Unit <topModule> generated.
+
+Analyzing generic Entity <rs232> in library <work> (Architecture <behavioral>).
+	MCLK_CYCLE = 3124
+	SCLK_CYCLE = 1
+	WAIT_CYCLE = 6
+	inc = 151
+	nofData = 128
+	nofTest = 21
+	pow = 16
+Entity <rs232> analyzed. Unit <rs232> generated.
+
+Analyzing Entity <ADC> in library <work> (Architecture <behavioral>).
+Entity <ADC> analyzed. Unit <ADC> generated.
+
+Analyzing Entity <clkdivider> in library <work> (Architecture <behavioral>).
+Entity <clkdivider> analyzed. Unit <clkdivider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <rs232>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/rs232.vhd".
+    Found 21x8-bit ROM for signal <buff_in$rom0000> created at line 104.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 11                                             |
+    | Inputs             | 1                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk_baud                  (rising_edge)        |
+    | Reset              | tx_start                  (negative)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | start                                          |
+    | Power Up State     | start                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 17-bit register for signal <acc>.
+    Found 17-bit adder for signal <acc$add0000> created at line 59.
+    Found 8-bit register for signal <buff_in>.
+    Found 13-bit up counter for signal <cntData>.
+    Found 13-bit up counter for signal <cntTest>.
+    Found 12-bit up counter for signal <count>.
+    Found 3-bit up counter for signal <counter>.
+    Found 1-bit register for signal <flag>.
+    Found 8-bit up counter for signal <indData>.
+    Found 13-bit adder for signal <indData$add0000> created at line 129.
+    Found 5-bit up counter for signal <indTest>.
+    Found 13-bit adder for signal <indTest$add0000> created at line 109.
+    Found 1-bit register for signal <mclk>.
+    Found 3-bit adder for signal <state$add0000> created at line 172.
+    Found 1-bit register for signal <tmp_txd>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred   6 Counter(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   4 Adder/Subtractor(s).
+Unit <rs232> synthesized.
+
+
+Synthesizing Unit <clkdivider>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/clkdivider.vhd".
+    Found 2-bit up counter for signal <count>.
+    Found 1-bit register for signal <ct>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clkdivider> synthesized.
+
+
+Synthesizing Unit <ADC>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/ADC.vhd".
+WARNING:Xst:646 - Signal <copysamp<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <a> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <cs>.
+    Found 8-bit register for signal <sample>.
+    Found 8-bit register for signal <copysamp<11:4>>.
+    Found 8-bit register for signal <cosample>.
+    Found 5-bit register for signal <countstate>.
+    Found 5-bit comparator less for signal <countstate$cmp_lt0000> created at line 38.
+    Found 5-bit comparator less for signal <countstate$cmp_lt0001> created at line 33.
+    Found 5-bit adder for signal <countstate$share0000>.
+    Found 5-bit comparator greatequal for signal <cs$cmp_ge0000> created at line 38.
+    Summary:
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <ADC> synthesized.
+
+
+Synthesizing Unit <topModule>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lateDemo/topModule.vhd".
+WARNING:Xst:1306 - Output <leds> is never assigned.
+WARNING:Xst:647 - Input <selecto> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <xorResult> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <state> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <ADCoutput<6:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 125x8-bit dual-port RAM <Mram_datas1> for signal <datas1>.
+    Register <tx_start1> equivalent to <receptionComplete<0>> has been removed
+    Found 1-bit 100-to-1 multiplexer for signal <$varindex0001> created at line 116.
+    Found 3-bit up counter for signal <bit_number>.
+    Found 7-bit up counter for signal <clkCount>.
+    Found 1-bit register for signal <clkk>.
+    Found 7-bit up counter for signal <count>.
+    Found 1-bit xor2 for signal <count$xor0000> created at line 116.
+    Found 8-bit register for signal <data>.
+    Found 7-bit up counter for signal <dataCount>.
+    Found 7-bit up counter for signal <dataCount1>.
+    Found 1-bit register for signal <dclk>.
+    Found 1-bit register for signal <firstSample<0>>.
+    Found 8-bit register for signal <outputData>.
+    Found 7-bit comparator greater for signal <outputData_0$cmp_gt0000> created at line 95.
+    Found 1-bit register for signal <receptionComplete<0>>.
+    Found 100-bit register for signal <sample1>.
+    Found 100-bit register for signal <sample2>.
+    Found 7-bit up counter for signal <sampleCount>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   6 Counter(s).
+	inferred 220 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <topModule> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 125x8-bit dual-port RAM                               : 1
+# ROMs                                                 : 1
+ 21x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 13-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 13
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+ 7-bit up counter                                      : 5
+ 8-bit up counter                                      : 1
+# Registers                                            : 231
+ 1-bit register                                        : 225
+ 17-bit register                                       : 1
+ 5-bit register                                        : 1
+ 8-bit register                                        : 4
+# Comparators                                          : 4
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 2
+ 7-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 100-to-1 multiplexer                            : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <rss/state/FSM> on signal <state[1:10]> with one-hot encoding.
+---------------------
+ State | Encoding
+---------------------
+ start | 0000000001
+ s1    | 0000000010
+ s2    | 0000000100
+ s3    | 0000001000
+ s4    | 0000010000
+ s5    | 0000100000
+ s6    | 0001000000
+ s7    | 0010000000
+ s8    | 0100000000
+ stop  | 1000000000
+---------------------
+WARNING:Xst:1426 - The value init of the FF/Latch firstSample_0 hinder the constant cleaning in the block topModule.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch receptionComplete_0 hinder the constant cleaning in the block topModule.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:2677 - Node <copysamp_4> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_10> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_5> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_6> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_7> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_8> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <copysamp_9> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_0> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_1> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_2> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_3> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_4> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_5> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <cosample_6> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_0> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_1> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_2> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_3> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_4> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_5> of sequential type is unconnected in block <aaddcc>.
+WARNING:Xst:2677 - Node <sample_6> of sequential type is unconnected in block <aaddcc>.
+
+Synthesizing (advanced) Unit <topModule>.
+INFO:Xst:3226 - The RAM <Mram_datas1> will be implemented as a BLOCK RAM, absorbing the following register(s): <data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 125-word x 8-bit                    |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <dclk>          | rise     |
+    |     weA            | connected to signal <_cmp_eq0000_0> | high     |
+    |     addrA          | connected to signal <dataCount>     |          |
+    |     diA            | connected to signal <outputData>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 125-word x 8-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk8Khz>       | rise     |
+    |     enB            | connected to signal <receptionComplete> | high     |
+    |     addrB          | connected to signal <dataCount1>    |          |
+    |     doB            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <topModule> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# RAMs                                                 : 1
+ 125x8-bit dual-port block RAM                         : 1
+# ROMs                                                 : 1
+ 21x8-bit ROM                                          : 1
+# Adders/Subtractors                                   : 5
+ 13-bit adder                                          : 2
+ 17-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 5-bit adder                                           : 1
+# Counters                                             : 13
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 2
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+ 7-bit up counter                                      : 5
+ 8-bit up counter                                      : 1
+# Registers                                            : 271
+ Flip-Flops                                            : 271
+# Comparators                                          : 4
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 2
+ 7-bit comparator greater                              : 1
+# Multiplexers                                         : 1
+ 1-bit 100-to-1 multiplexer                            : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch firstSample_0 hinder the constant cleaning in the block topModule.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch receptionComplete_0 hinder the constant cleaning in the block topModule.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <topModule> ...
+
+Optimizing unit <rs232> ...
+
+Optimizing unit <ADC> ...
+WARNING:Xst:2677 - Node <aaddcc/sample_6> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_5> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_4> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_3> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_2> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_1> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/sample_0> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_6> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_5> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_4> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_3> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_2> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_1> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/cosample_0> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_9> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_8> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_7> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_6> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_5> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_10> of sequential type is unconnected in block <topModule>.
+WARNING:Xst:2677 - Node <aaddcc/copysamp_4> of sequential type is unconnected in block <topModule>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topModule, actual ratio is 39.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 354
+ Flip-Flops                                            : 354
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : topModule.ngr
+Top Level Output File Name         : topModule
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 903
+#      GND                         : 1
+#      INV                         : 24
+#      LUT1                        : 77
+#      LUT2                        : 52
+#      LUT2_D                      : 6
+#      LUT2_L                      : 1
+#      LUT3                        : 189
+#      LUT3_D                      : 7
+#      LUT4                        : 303
+#      LUT4_D                      : 11
+#      LUT4_L                      : 4
+#      MUXCY                       : 82
+#      MUXF5                       : 36
+#      MUXF6                       : 12
+#      MUXF7                       : 6
+#      MUXF8                       : 3
+#      VCC                         : 1
+#      XORCY                       : 88
+# FlipFlops/Latches                : 354
+#      FDE                         : 238
+#      FDE_1                       : 3
+#      FDR                         : 35
+#      FDRE                        : 57
+#      FDRE_1                      : 5
+#      FDRS                        : 1
+#      FDS                         : 14
+#      FDSE_1                      : 1
+# RAMS                             : 1
+#      RAMB16_S9_S9                : 1
+# Clock Buffers                    : 3
+#      BUFG                        : 2
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      363  out of    960    37%  
+ Number of Slice Flip Flops:            354  out of   1920    18%  
+ Number of 4 input LUTs:                674  out of   1920    35%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                   7  out of     83     8%  
+ Number of BRAMs:                         1  out of      4    25%  
+ Number of GCLKs:                         3  out of     24    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+-------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)   | Load  |
+-----------------------------------+-------------------------+-------+
+clock                              | BUFGP                   | 9     |
+dclk1                              | BUFG                    | 235   |
+rss/mclk                           | NONE(dataCount1_0)      | 8     |
+rss/acc_16                         | NONE(rss/state_FSM_FFd2)| 14    |
+clkk1                              | BUFG                    | 81    |
+aaddcc/clkdiv/ct                   | NONE(aaddcc/sample_7)   | 9     |
+-----------------------------------+-------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.706ns (Maximum Frequency: 129.772MHz)
+   Minimum input arrival time before clock: 4.365ns
+   Maximum output required time after clock: 4.476ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 4.257ns (frequency: 234.902MHz)
+  Total number of paths / destination ports: 86 / 17
+-------------------------------------------------------------------------
+Delay:               4.257ns (Levels of Logic = 2)
+  Source:            clkCount_0 (FF)
+  Destination:       clkCount_0 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: clkCount_0 to clkCount_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   0.514   0.721  clkCount_0 (clkCount_0)
+     LUT4:I0->O            1   0.612   0.360  dclk_cmp_eq0000_SW0 (N121)
+     LUT4:I3->O            8   0.612   0.643  dclk_cmp_eq0000 (dclk_cmp_eq0000)
+     FDR:R                     0.795          clkCount_0
+    ----------------------------------------
+    Total                      4.257ns (2.533ns logic, 1.724ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dclk1'
+  Clock period: 7.280ns (frequency: 137.366MHz)
+  Total number of paths / destination ports: 4831 / 396
+-------------------------------------------------------------------------
+Delay:               7.280ns (Levels of Logic = 3)
+  Source:            sampleCount_3 (FF)
+  Destination:       Mram_datas1 (RAM)
+  Source Clock:      dclk1 rising
+  Destination Clock: dclk1 rising
+
+  Data Path: sampleCount_3 to Mram_datas1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            53   0.514   1.148  sampleCount_3 (sampleCount_3)
+     LUT4_D:I1->O         17   0.612   0.896  and0000_cmp_eq000031 (N22)
+     LUT4:I3->O          118   0.612   1.099  receptionComplete_0_not000117 (_and0000)
+     LUT4:I3->O            9   0.612   0.697  _cmp_eq0000_01 (_cmp_eq0000_0)
+     RAMB16_S9_S9:WEA          1.090          Mram_datas1
+    ----------------------------------------
+    Total                      7.280ns (3.440ns logic, 3.840ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rss/mclk'
+  Clock period: 6.277ns (frequency: 159.319MHz)
+  Total number of paths / destination ports: 123 / 14
+-------------------------------------------------------------------------
+Delay:               6.277ns (Levels of Logic = 5)
+  Source:            dataCount1_0 (FF)
+  Destination:       dataCount1_6 (FF)
+  Source Clock:      rss/mclk rising
+  Destination Clock: rss/mclk rising
+
+  Data Path: dataCount1_0 to dataCount1_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.514   0.721  dataCount1_0 (dataCount1_0)
+     LUT4_D:I0->O          1   0.612   0.360  dataCount1_cmp_eq0000_SW0 (N331)
+     LUT4_D:I3->O          5   0.612   0.607  dataCount1_cmp_eq0000 (dataCount1_cmp_eq0000)
+     LUT2_D:I1->O          1   0.612   0.387  Mcount_dataCount1_lut<2>1 (Mcount_dataCount1_lut<2>)
+     LUT4_D:I2->O          1   0.612   0.360  Mcount_dataCount1_cy<4>11 (Mcount_dataCount1_cy<4>)
+     LUT4:I3->O            1   0.612   0.000  Mcount_dataCount1_xor<6>11 (Mcount_dataCount16)
+     FDE:D                     0.268          dataCount1_6
+    ----------------------------------------
+    Total                      6.277ns (3.842ns logic, 2.435ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'rss/acc_16'
+  Clock period: 4.239ns (frequency: 235.885MHz)
+  Total number of paths / destination ports: 55 / 21
+-------------------------------------------------------------------------
+Delay:               4.239ns (Levels of Logic = 3)
+  Source:            rss/state_FSM_FFd8 (FF)
+  Destination:       rss/tmp_txd (FF)
+  Source Clock:      rss/acc_16 rising
+  Destination Clock: rss/acc_16 rising
+
+  Data Path: rss/state_FSM_FFd8 to rss/tmp_txd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.514   0.603  rss/state_FSM_FFd8 (rss/state_FSM_FFd8)
+     LUT4:I0->O            1   0.612   0.509  rss/tmp_txd_mux00024 (rss/tmp_txd_mux00024)
+     LUT4:I0->O            1   0.612   0.509  rss/tmp_txd_mux000236 (rss/tmp_txd_mux000236)
+     LUT3:I0->O            1   0.612   0.000  rss/tmp_txd_mux000291 (rss/tmp_txd_mux0002)
+     FDS:D                     0.268          rss/tmp_txd
+    ----------------------------------------
+    Total                      4.239ns (2.618ns logic, 1.621ns route)
+                                       (61.8% logic, 38.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkk1'
+  Clock period: 7.706ns (frequency: 129.772MHz)
+  Total number of paths / destination ports: 5867 / 200
+-------------------------------------------------------------------------
+Delay:               7.706ns (Levels of Logic = 14)
+  Source:            rss/cntTest_1 (FF)
+  Destination:       rss/cntTest_12 (FF)
+  Source Clock:      clkk1 rising
+  Destination Clock: clkk1 rising
+
+  Data Path: rss/cntTest_1 to rss/cntTest_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             3   0.514   0.603  rss/cntTest_1 (rss/cntTest_1)
+     LUT1:I0->O            1   0.612   0.000  rss/Madd_indTest_add0000_cy<1>_rt (rss/Madd_indTest_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.404   0.000  rss/Madd_indTest_add0000_cy<1> (rss/Madd_indTest_add0000_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<2> (rss/Madd_indTest_add0000_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<3> (rss/Madd_indTest_add0000_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<4> (rss/Madd_indTest_add0000_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<5> (rss/Madd_indTest_add0000_cy<5>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<6> (rss/Madd_indTest_add0000_cy<6>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<7> (rss/Madd_indTest_add0000_cy<7>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<8> (rss/Madd_indTest_add0000_cy<8>)
+     MUXCY:CI->O           1   0.051   0.000  rss/Madd_indTest_add0000_cy<9> (rss/Madd_indTest_add0000_cy<9>)
+     XORCY:CI->O           1   0.699   0.360  rss/Madd_indTest_add0000_xor<10> (rss/indTest_add0000<10>)
+     LUT4:I3->O            2   0.612   0.532  rss/cntTest_or0000148 (rss/cntTest_or0000148)
+     LUT4_L:I0->LO         1   0.612   0.103  rss/cntTest_or0000161_SW0 (N351)
+     LUT4:I3->O           13   0.612   0.836  rss/cntTest_or00002 (rss/cntTest_or0000)
+     FDRE:R                    0.795          rss/cntTest_0
+    ----------------------------------------
+    Total                      7.706ns (5.272ns logic, 2.434ns route)
+                                       (68.4% logic, 31.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'aaddcc/clkdiv/ct'
+  Clock period: 4.337ns (frequency: 230.585MHz)
+  Total number of paths / destination ports: 103 / 22
+-------------------------------------------------------------------------
+Delay:               4.337ns (Levels of Logic = 2)
+  Source:            aaddcc/countstate_0 (FF)
+  Destination:       aaddcc/countstate_4 (FF)
+  Source Clock:      aaddcc/clkdiv/ct falling
+  Destination Clock: aaddcc/clkdiv/ct falling
+
+  Data Path: aaddcc/countstate_0 to aaddcc/countstate_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE_1:C->Q           6   0.514   0.721  aaddcc/countstate_0 (aaddcc/countstate_0)
+     LUT2:I0->O            3   0.612   0.481  aaddcc/copysamp_4_and000031 (aaddcc/copysamp_4_and0000_bdd2)
+     LUT4:I2->O            7   0.612   0.602  aaddcc/countstate_not0002_inv1 (aaddcc/countstate_not0002_inv)
+     FDRE_1:R                  0.795          aaddcc/cs
+    ----------------------------------------
+    Total                      4.337ns (2.533ns logic, 1.804ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkk1'
+  Total number of paths / destination ports: 57 / 57
+-------------------------------------------------------------------------
+Offset:              4.365ns (Levels of Logic = 2)
+  Source:            test_mode (PAD)
+  Destination:       rss/cntTest_12 (FF)
+  Destination Clock: clkk1 rising
+
+  Data Path: test_mode to rss/cntTest_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            15   1.106   1.016  test_mode_IBUF (test_mode_IBUF)
+     LUT4:I0->O           13   0.612   0.836  rss/cntTest_or00002 (rss/cntTest_or0000)
+     FDRE:R                    0.795          rss/cntTest_0
+    ----------------------------------------
+    Total                      4.365ns (2.513ns logic, 1.852ns route)
+                                       (57.6% logic, 42.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'aaddcc/clkdiv/ct'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.731ns (Levels of Logic = 1)
+  Source:            sdata (PAD)
+  Destination:       aaddcc/copysamp_11 (FF)
+  Destination Clock: aaddcc/clkdiv/ct falling
+
+  Data Path: sdata to aaddcc/copysamp_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.106   0.357  sdata_IBUF (sdata_IBUF)
+     FDE_1:D                   0.268          aaddcc/copysamp_11
+    ----------------------------------------
+    Total                      1.731ns (1.374ns logic, 0.357ns route)
+                                       (79.4% logic, 20.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'aaddcc/clkdiv/ct'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            aaddcc/cs (FF)
+  Destination:       cs (PAD)
+  Source Clock:      aaddcc/clkdiv/ct falling
+
+  Data Path: aaddcc/cs to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.514   0.357  aaddcc/cs (aaddcc/cs)
+     OBUF:I->O                 3.169          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'rss/acc_16'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            rss/tmp_txd (FF)
+  Destination:       txd (PAD)
+  Source Clock:      rss/acc_16 rising
+
+  Data Path: rss/tmp_txd to txd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              1   0.514   0.357  rss/tmp_txd (rss/tmp_txd)
+     OBUF:I->O                 3.169          txd_OBUF (txd)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkk1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.476ns (Levels of Logic = 1)
+  Source:            aaddcc/clkdiv/ct (FF)
+  Destination:       sclk200Khz (PAD)
+  Source Clock:      clkk1 rising
+
+  Data Path: aaddcc/clkdiv/ct to sclk200Khz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.514   0.793  aaddcc/clkdiv/ct (aaddcc/clkdiv/ct)
+     OBUF:I->O                 3.169          sclk200Khz_OBUF (sclk200Khz)
+    ----------------------------------------
+    Total                      4.476ns (3.683ns logic, 0.793ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.87 secs
+ 
+--> 
+
+Total memory usage is 267744 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   53 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

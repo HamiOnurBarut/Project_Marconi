@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2211" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd</arg>&quot; line <arg fmt="%d" index="2">40</arg>: Instantiating black box module &lt;<arg fmt="%s" index="3">DDS</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1610" delta="new" >&quot;<arg fmt="%s" index="1">C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd</arg>&quot; line <arg fmt="%d" index="2">49</arg>: Width mismatch. &lt;<arg fmt="%s" index="3">leds</arg>&gt; has a width of <arg fmt="%d" index="4">8</arg> bits but assigned expression is <arg fmt="%d" index="5">9</arg>-bit wide.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">copysamp&lt;3:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="new" >Signal &lt;<arg fmt="%s" index="1">a</arg>&gt; is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="new" >Signal &lt;<arg fmt="%s" index="1">DDSdata&lt;3:0&gt;</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003db</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a4&gt; &lt;blk000004a8&gt; &lt;blk000004ac&gt; &lt;blk000004ce&gt; &lt;blk000004cf&gt; &lt;blk000004d0&gt; &lt;blk000004d1&gt; &lt;blk000004d2&gt; &lt;blk000004d3&gt; &lt;blk000004d4&gt; &lt;blk000004d5&gt; &lt;blk000004d6&gt; &lt;blk000004d7&gt; &lt;blk000004d8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003da</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a3&gt; &lt;blk000004a7&gt; &lt;blk000004ab&gt; &lt;blk000004c3&gt; &lt;blk000004c4&gt; &lt;blk000004c5&gt; &lt;blk000004c6&gt; &lt;blk000004c7&gt; &lt;blk000004c8&gt; &lt;blk000004c9&gt; &lt;blk000004ca&gt; &lt;blk000004cb&gt; &lt;blk000004cc&gt; &lt;blk000004cd&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003d9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a2&gt; &lt;blk000004a6&gt; &lt;blk000004aa&gt; &lt;blk000004b8&gt; &lt;blk000004b9&gt; &lt;blk000004ba&gt; &lt;blk000004bb&gt; &lt;blk000004bc&gt; &lt;blk000004bd&gt; &lt;blk000004be&gt; &lt;blk000004bf&gt; &lt;blk000004c0&gt; &lt;blk000004c1&gt; &lt;blk000004c2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003d8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a1&gt; &lt;blk000004a5&gt; &lt;blk000004a9&gt; &lt;blk000004ad&gt; &lt;blk000004ae&gt; &lt;blk000004af&gt; &lt;blk000004b0&gt; &lt;blk000004b1&gt; &lt;blk000004b2&gt; &lt;blk000004b3&gt; &lt;blk000004b4&gt; &lt;blk000004b5&gt; &lt;blk000004b6&gt; &lt;blk000004b7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003db</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a4&gt; &lt;blk000004a8&gt; &lt;blk000004ac&gt; &lt;blk000004ce&gt; &lt;blk000004cf&gt; &lt;blk000004d0&gt; &lt;blk000004d1&gt; &lt;blk000004d2&gt; &lt;blk000004d3&gt; &lt;blk000004d4&gt; &lt;blk000004d5&gt; &lt;blk000004d6&gt; &lt;blk000004d7&gt; &lt;blk000004d8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003da</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a3&gt; &lt;blk000004a7&gt; &lt;blk000004ab&gt; &lt;blk000004c3&gt; &lt;blk000004c4&gt; &lt;blk000004c5&gt; &lt;blk000004c6&gt; &lt;blk000004c7&gt; &lt;blk000004c8&gt; &lt;blk000004c9&gt; &lt;blk000004ca&gt; &lt;blk000004cb&gt; &lt;blk000004cc&gt; &lt;blk000004cd&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003d9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a2&gt; &lt;blk000004a6&gt; &lt;blk000004aa&gt; &lt;blk000004b8&gt; &lt;blk000004b9&gt; &lt;blk000004ba&gt; &lt;blk000004bb&gt; &lt;blk000004bc&gt; &lt;blk000004bd&gt; &lt;blk000004be&gt; &lt;blk000004bf&gt; &lt;blk000004c0&gt; &lt;blk000004c1&gt; &lt;blk000004c2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">blk000003d8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">DDScomp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">14 FFs/Latches</arg> : <arg fmt="%s" index="4">&lt;blk000004a1&gt; &lt;blk000004a5&gt; &lt;blk000004a9&gt; &lt;blk000004ad&gt; &lt;blk000004ae&gt; &lt;blk000004af&gt; &lt;blk000004b0&gt; &lt;blk000004b1&gt; &lt;blk000004b2&gt; &lt;blk000004b3&gt; &lt;blk000004b4&gt; &lt;blk000004b5&gt; &lt;blk000004b6&gt; &lt;blk000004b7&gt; </arg>
+</msg>
+
+</messages>
+

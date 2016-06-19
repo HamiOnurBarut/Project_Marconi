@@ -1,0 +1,528 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: topModule.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "topModule.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "topModule"
+Output Format                      : NGC
+Target Device                      : xc3s100e-5-cp132
+
+---- Source Options
+Top Module Name                    : topModule
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd" in Library work.
+Architecture behavioral of Entity clkdivider is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd" in Library work.
+Architecture behavioral of Entity adc is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ipcore_dir/DDS.vhd" in Library work.
+Architecture dds_a of Entity dds is up to date.
+Compiling vhdl file "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" in Library work.
+Entity <topmodule> compiled.
+Entity <topmodule> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <topModule> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ADC> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <clkdivider> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <topModule> in library <work> (Architecture <behavioral>).
+WARNING:Xst:2211 - "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" line 40: Instantiating black box module <DDS>.
+WARNING:Xst:1610 - "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd" line 49: Width mismatch. <leds> has a width of 8 bits but assigned expression is 9-bit wide.
+Entity <topModule> analyzed. Unit <topModule> generated.
+
+Analyzing Entity <ADC> in library <work> (Architecture <behavioral>).
+Entity <ADC> analyzed. Unit <ADC> generated.
+
+Analyzing Entity <clkdivider> in library <work> (Architecture <behavioral>).
+Entity <clkdivider> analyzed. Unit <clkdivider> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <clkdivider>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/clkdivider.vhd".
+    Found 2-bit up counter for signal <count>.
+    Found 1-bit register for signal <ct>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <clkdivider> synthesized.
+
+
+Synthesizing Unit <ADC>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/ADC.vhd".
+WARNING:Xst:646 - Signal <copysamp<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <a> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <cs>.
+    Found 8-bit register for signal <sample>.
+    Found 8-bit register for signal <copysamp<11:4>>.
+    Found 8-bit register for signal <cosample>.
+    Found 5-bit register for signal <countstate>.
+    Found 5-bit comparator less for signal <countstate$cmp_lt0000> created at line 39.
+    Found 5-bit comparator less for signal <countstate$cmp_lt0001> created at line 34.
+    Found 5-bit adder for signal <countstate$share0000>.
+    Found 5-bit comparator greatequal for signal <cs$cmp_ge0000> created at line 39.
+    Summary:
+	inferred  30 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
+Unit <ADC> synthesized.
+
+
+Synthesizing Unit <topModule>.
+    Related source file is "C:/Users/Mehmet/Desktop/2014-2015-Spring/EEE 495/lab3/topModule.vhd".
+WARNING:Xst:646 - Signal <DDSdata<3:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <oscilloscope>.
+    Found 8-bit register for signal <leds>.
+    Found 10-bit adder carry out for signal <frequency$addsub0000> created at line 41.
+    Found 8-bit adder for signal <leds$addsub0000> created at line 49.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+Unit <topModule> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder carry out                                : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 15
+ 1-bit register                                        : 11
+ 5-bit register                                        : 1
+ 8-bit register                                        : 3
+# Comparators                                          : 3
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/DDS.ngc>.
+Loading core <DDS> for timing and area information for instance <DDScomp>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder carry out                                : 1
+ 5-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 40
+ Flip-Flops                                            : 40
+# Comparators                                          : 3
+ 5-bit comparator greatequal                           : 1
+ 5-bit comparator less                                 : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <topModule> ...
+
+Optimizing unit <ADC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block topModule, actual ratio is 31.
+INFO:Xst:2260 - The FF/Latch <blk000003db> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a4> <blk000004a8> <blk000004ac> <blk000004ce> <blk000004cf> <blk000004d0> <blk000004d1> <blk000004d2> <blk000004d3> <blk000004d4> <blk000004d5> <blk000004d6> <blk000004d7> <blk000004d8> 
+INFO:Xst:2260 - The FF/Latch <blk000003da> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a3> <blk000004a7> <blk000004ab> <blk000004c3> <blk000004c4> <blk000004c5> <blk000004c6> <blk000004c7> <blk000004c8> <blk000004c9> <blk000004ca> <blk000004cb> <blk000004cc> <blk000004cd> 
+INFO:Xst:2260 - The FF/Latch <blk000003d9> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a2> <blk000004a6> <blk000004aa> <blk000004b8> <blk000004b9> <blk000004ba> <blk000004bb> <blk000004bc> <blk000004bd> <blk000004be> <blk000004bf> <blk000004c0> <blk000004c1> <blk000004c2> 
+INFO:Xst:2260 - The FF/Latch <blk000003d8> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a1> <blk000004a5> <blk000004a9> <blk000004ad> <blk000004ae> <blk000004af> <blk000004b0> <blk000004b1> <blk000004b2> <blk000004b3> <blk000004b4> <blk000004b5> <blk000004b6> <blk000004b7> 
+INFO:Xst:2260 - The FF/Latch <blk000003db> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a4> <blk000004a8> <blk000004ac> <blk000004ce> <blk000004cf> <blk000004d0> <blk000004d1> <blk000004d2> <blk000004d3> <blk000004d4> <blk000004d5> <blk000004d6> <blk000004d7> <blk000004d8> 
+INFO:Xst:2260 - The FF/Latch <blk000003da> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a3> <blk000004a7> <blk000004ab> <blk000004c3> <blk000004c4> <blk000004c5> <blk000004c6> <blk000004c7> <blk000004c8> <blk000004c9> <blk000004ca> <blk000004cb> <blk000004cc> <blk000004cd> 
+INFO:Xst:2260 - The FF/Latch <blk000003d9> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a2> <blk000004a6> <blk000004aa> <blk000004b8> <blk000004b9> <blk000004ba> <blk000004bb> <blk000004bc> <blk000004bd> <blk000004be> <blk000004bf> <blk000004c0> <blk000004c1> <blk000004c2> 
+INFO:Xst:2260 - The FF/Latch <blk000003d8> in Unit <DDScomp> is equivalent to the following 14 FFs/Latches : <blk000004a1> <blk000004a5> <blk000004a9> <blk000004ad> <blk000004ae> <blk000004af> <blk000004b0> <blk000004b1> <blk000004b2> <blk000004b3> <blk000004b4> <blk000004b5> <blk000004b6> <blk000004b7> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : topModule.ngr
+Top Level Output File Name         : topModule
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 23
+
+Cell Usage :
+# BELS                             : 871
+#      GND                         : 2
+#      INV                         : 3
+#      LUT1                        : 125
+#      LUT2                        : 43
+#      LUT2_D                      : 4
+#      LUT3                        : 263
+#      LUT4                        : 21
+#      MUXCY                       : 38
+#      MUXF5                       : 177
+#      MUXF6                       : 88
+#      MUXF7                       : 44
+#      MUXF8                       : 22
+#      VCC                         : 1
+#      XORCY                       : 40
+# FlipFlops/Latches                : 210
+#      FD                          : 161
+#      FDE                         : 19
+#      FDE_1                       : 24
+#      FDRE_1                      : 5
+#      FDSE_1                      : 1
+# RAMS                             : 258
+#      RAM16X1D                    : 258
+# Shift Registers                  : 9
+#      SRL16                       : 9
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 11
+#      OBUF                        : 11
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-5 
+
+ Number of Slices:                      298  out of    960    31%  
+ Number of Slice Flip Flops:            210  out of   1920    10%  
+ Number of 4 input LUTs:                984  out of   1920    51%  
+    Number used as logic:               459
+    Number used as Shift registers:       9
+    Number used as RAMs:                516
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of     83    27%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 447   |
+ADCcomp/clkdiv/ct1                 | BUFG                   | 30    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.449ns (Maximum Frequency: 155.067MHz)
+   Minimum input arrival time before clock: 3.812ns
+   Maximum output required time after clock: 4.134ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 6.449ns (frequency: 155.067MHz)
+  Total number of paths / destination ports: 5585 / 1208
+-------------------------------------------------------------------------
+Delay:               6.449ns (Levels of Logic = 6)
+  Source:            DDScomp/blk000002c3 (RAM)
+  Destination:       DDScomp/blk000003c7 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: DDScomp/blk000002c3 to DDScomp/blk000003c7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO  110   1.654   1.246  blk000002c3 (sig00000269)
+     LUT1:I0->O            1   0.612   0.000  blk0000040e (sig0000042c)
+     MUXF5:I0->O           1   0.278   0.000  blk00000087 (sig0000041d)
+     MUXF6:I0->O           1   0.451   0.000  blk00000088 (sig00000448)
+     MUXF7:I0->O           1   0.451   0.000  blk00000089 (sig00000440)
+     MUXF8:I1->O           1   0.451   0.426  blk00000093 (sig0000043f)
+     LUT3:I1->O            1   0.612   0.000  blk00000403 (sig00000177)
+     FD:D                      0.268          blk000003c8
+    ----------------------------------------
+    Total                      6.449ns (4.777ns logic, 1.672ns route)
+                                       (74.1% logic, 25.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ADCcomp/clkdiv/ct1'
+  Clock period: 4.335ns (frequency: 230.681MHz)
+  Total number of paths / destination ports: 222 / 57
+-------------------------------------------------------------------------
+Delay:               4.335ns (Levels of Logic = 2)
+  Source:            ADCcomp/countstate_0 (FF)
+  Destination:       ADCcomp/countstate_4 (FF)
+  Source Clock:      ADCcomp/clkdiv/ct1 falling
+  Destination Clock: ADCcomp/clkdiv/ct1 falling
+
+  Data Path: ADCcomp/countstate_0 to ADCcomp/countstate_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE_1:C->Q           9   0.514   0.849  ADCcomp/countstate_0 (ADCcomp/countstate_0)
+     LUT2_D:I0->LO         1   0.612   0.103  ADCcomp/copysamp_4_and000031 (N20)
+     LUT4:I3->O           14   0.612   0.850  ADCcomp/countstate_not0002_inv1 (ADCcomp/countstate_not0002_inv)
+     FDRE_1:R                  0.795          ADCcomp/cs
+    ----------------------------------------
+    Total                      4.335ns (2.533ns logic, 1.802ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 75 / 36
+-------------------------------------------------------------------------
+Offset:              3.812ns (Levels of Logic = 4)
+  Source:            switch<1> (PAD)
+  Destination:       DDScomp/blk0000003b (FF)
+  Destination Clock: clock rising
+
+  Data Path: switch<1> to DDScomp/blk0000003b
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             5   1.106   0.607  switch_1_IBUF (Madd_frequency_addsub0000_cy<1>)
+     LUT4:I1->O            5   0.612   0.607  Madd_frequency_addsub0000_xor<7>121 (N11)
+     LUT2:I1->O            1   0.612   0.000  Madd_frequency_addsub0000_xor<5>11 (frequency<5>)
+     begin scope: 'DDScomp'
+     FDE:D                     0.268          blk0000003c
+    ----------------------------------------
+    Total                      3.812ns (2.598ns logic, 1.214ns route)
+                                       (68.2% logic, 31.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ADCcomp/clkdiv/ct1'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.017ns (Levels of Logic = 1)
+  Source:            sdata (PAD)
+  Destination:       ADCcomp/copysamp_9 (FF)
+  Destination Clock: ADCcomp/clkdiv/ct1 falling
+
+  Data Path: sdata to ADCcomp/copysamp_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.106   0.643  sdata_IBUF (sdata_IBUF)
+     FDE_1:D                   0.268          ADCcomp/copysamp_4
+    ----------------------------------------
+    Total                      2.017ns (1.374ns logic, 0.643ns route)
+                                       (68.1% logic, 31.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'ADCcomp/clkdiv/ct1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.040ns (Levels of Logic = 1)
+  Source:            ADCcomp/cs (FF)
+  Destination:       cs (PAD)
+  Source Clock:      ADCcomp/clkdiv/ct1 falling
+
+  Data Path: ADCcomp/cs to cs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE_1:C->Q           1   0.514   0.357  ADCcomp/cs (ADCcomp/cs)
+     OBUF:I->O                 3.169          cs_OBUF (cs)
+    ----------------------------------------
+    Total                      4.040ns (3.683ns logic, 0.357ns route)
+                                       (91.2% logic, 8.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.134ns (Levels of Logic = 1)
+  Source:            ADCcomp/clkdiv/ct (FF)
+  Destination:       clk200Khz (PAD)
+  Source Clock:      clock rising
+
+  Data Path: ADCcomp/clkdiv/ct to clk200Khz
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.514   0.451  ADCcomp/clkdiv/ct (ADCcomp/clkdiv/ct1)
+     OBUF:I->O                 3.169          clk200Khz_OBUF (clk200Khz)
+    ----------------------------------------
+    Total                      4.134ns (3.683ns logic, 0.451ns route)
+                                       (89.1% logic, 10.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 13.24 secs
+ 
+--> 
+
+Total memory usage is 282092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+
